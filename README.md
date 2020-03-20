@@ -16,6 +16,7 @@ cd Simplified-iOS
 ln -s <rmsdk_path>/DRM_Connector_Prerelease adobe-rmsdk
 git checkout develop
 git submodule update --init --recursive
+swift KeyObfuscator.swift
 ```
 03. Build dependencies (carthage, OpenSSL, cURL). You can also use this script at any other time if you ever need to rebuild them: it should be idempotent. The non-optional parameter specifies which configuration of the AudioEngine framework to use. Note that the Release build of AudioEngine does not contain slices for Simulator architectures, causing a Carthage build failure.
 ```bash
